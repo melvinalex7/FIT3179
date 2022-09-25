@@ -53,7 +53,8 @@
     "color": {
       "field": "Happiness_Score",
       "type": "quantitative",
-      "scale": {"type": "linear"}
+      "scale": {"type": "linear"},
+      "legend": {"format": ".2s", "title": "Happiness Score"}
     },
     "tooltip": [
       {"field": "Country", "type": "nominal", "title": "Country"},
