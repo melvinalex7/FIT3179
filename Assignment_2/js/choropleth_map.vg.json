@@ -57,7 +57,7 @@
     },
     "tooltip": [
       {"field": "Country", "type": "nominal", "title": "Country"},
-      {"field": "Happiness_Score", "type": "quantitative"}
+      {"field": "Happiness_Score", "type": "quantitative", "title": "Happiness Score"}
     ]
   }
 }
