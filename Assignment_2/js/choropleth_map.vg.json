@@ -7,31 +7,19 @@
     "url": "https://raw.githubusercontent.com/melvinalex7/FIT3179/main/Assignment_2/data/Happiness_Report_Dataset_Cleaned.csv"
   },
 
-  "projection": {"type": "equirectangular"},
+  "projection": {"type": "equalEarth"},
   "params": [
-  {
-  "name": "year_selection",
-  "bind": {
-  "input": "select",
-    "options": [
-    "null",
-    "2015",
-    "2016",
-    "2017",
-    "2018",
-    "2019" 
-    ],
-    "labels":[
-    "Select Year",
-    "2015",
-    "2016",
-    "2017",
-    "2018",
-    "2019"
-    ],
-    "name": "Survey Year: "
+    {
+      "name": "year_selection",
+      "value": 2015,
+      "bind": {
+        "input": "range",
+        "min": 2015,
+        "max": 2019,
+        "step": 1,
+        "name": "Report Year: "
+      }
     }
-  }
 ],      
   "transform": [
     {
