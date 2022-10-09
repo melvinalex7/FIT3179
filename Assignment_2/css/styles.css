@@ -1,4 +1,5 @@
 #choropleth_map {
+
 }
 
 body *{
@@ -10,7 +11,7 @@ body *{
   }
   
   body {
-	background-color: rgb(167, 88, 175);
+	background-color: rgb(154, 151, 155);
   }
   
   .page {
