@@ -1,0 +1,114 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Least Happiest Countries in the World",
+    "width": 400,
+    "height": 400,
+    "params": [
+      {
+        "name": "year_selection",
+        "value": 2015,
+        "bind": {
+          "input": "range",
+          "min": 2015,
+          "max": 2019,
+          "step": 1,
+          "name": "Report Year: "
+        }
+      },
+      {
+        "name": "category_selection",
+        "value": "Happiness_Score",
+        "bind": {
+          "input": "select",
+          "options": [
+            "Happiness_Score",
+            "Economy",
+            "Family",
+            "Health",
+            "Freedom",
+            "Trust",
+            "Generosity"
+          ],
+          "labels": [
+            "Overall",
+            "Economy",
+            "Family",
+            "Health",
+            "Freedom",
+            "Trust",
+            "Generosity"
+          ],
+          "name": "Category: "
+        }
+      }
+  
+    ],
+  
+  "data": {
+    "name": "report_source",
+    "url": "https://raw.githubusercontent.com/melvinalex7/FIT3179/main/Assignment_2/data/Happiness_Report_Dataset_Cleaned.csv"
+  },
+  "transform": [
+    { "filter": "datum.Year == year_selection"},
+    {
+      "lookup": "Country",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/melvinalex7/FIT3179/main/Assignment_2/data/flags.csv"
+        },
+        "key": "Country",
+        "fields": ["ImageURL"]
+      }
+    },
+    {
+      "calculate": "datum[category_selection]", "as": "selected_category"
+    },
+    {
+        "window": [{
+          "op": "rank",
+          "as": "happiness_rank"
+        }],
+        "sort": [{ "field": "Happiness_Score", "order": "ascending" }]
+    }, 
+    { "filter": "datum.happiness_rank <= 10" },
+    {"calculate": "split(datum.Country, ' ')", "as": "country_wrap"}
+      
+      
+  ],
+  "encoding": {
+    "y": {
+        "field": "country_wrap",
+        "type": "nominal",
+        "title": "Country",
+        "sort": {"field": "selected_category", "order":"ascending"}
+    },
+    "x": {
+        "field": "selected_category",
+        "type": "quantitative",
+        "title": "Happiness Score",
+  
+        "stack": null
+    },
+    "color":{
+      "value": "indigo"
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal", "title": "Country"},
+      {"field": "selected_category", "type": "quantitative", "title": "Happiness Score", "format": ".4"}]
+  },
+  "layer":[
+    {
+      "mark": {"type": "bar", "height": 5, "clip": true}
+    },
+    {
+      "mark": {"type": "circle", "size": 1400, "opacity": 1, "clip": true}
+    },
+    {
+      "mark": {"type": "image", "width": 35, "height": 35, "clip": true},
+      "encoding": {
+        "url": {"field": "ImageURL", "type": "nominal"}
+      }
+    }
+  ]
+  
+  }

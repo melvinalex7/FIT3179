@@ -96,10 +96,13 @@
 },
 "layer":[
   {
-    "mark": {"type": "bar", "height": 5}
+    "mark": {"type": "bar", "height": 5, "clip": true}
   },
   {
-    "mark": {"type": "image", "width": 35, "height": 35},
+    "mark": {"type": "circle", "size": 1400, "opacity": 1, "clip": true}
+  },
+  {
+    "mark": {"type": "image", "width": 35, "height": 35, "clip": true},
     "encoding": {
       "url": {"field": "ImageURL", "type": "nominal"}
     }

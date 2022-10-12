@@ -1,5 +1,5 @@
 #choropleth_map {
-
+  width: 100%;
 }
 
 body *{
@@ -15,7 +15,7 @@ body *{
   }
   
   .page {
-	width: 950px;
+	width: 1100px;
 	background-color: white;
 	margin: auto;
 	padding: 50px;
@@ -40,7 +40,7 @@ body *{
   }
   
   .pure-g {
-	margin-bottom: 40px;
+	margin: 10px;
   }
   
   .small-font {
