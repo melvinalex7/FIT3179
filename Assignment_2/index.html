@@ -21,80 +21,141 @@
 
 </head>
 <body>
-
   <div class="page">
+    <img src="/happiness_banner.png" class="website-img-banner">
+    <div class="page-content">
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <h1>World Happiness Report</h1>
-        <p>The World Happiness Report is a landmark survey of the state of global happiness.</p>
-      </div>
-    </div>
-    <!-- end pure grid group -->
 
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <div id="choropleth_map"></div>
+      <!-- pure grid group -->
+      <div class="pure-g" style="padding-bottom: 20px;">
+        <div class="pure-u-1-2">
+          <p>The World Happiness Report is a landmark survey of the state of global happiness. 
+              Several Hapiness Indicators are used to assess the overall hapiness of countries. 
+              The report is now gaining popularity more than ever as countries around the world now use happiness indicators to reform government services and guide policy decisions. 
+              Several leading experts from a variety of disciplines, including economics, psychology, survey analysis, national statistics, health, and public policy, analyse how different indicators contribute to a country's development.
+               </p>
+        </div>
+        <div class="pure-u-1-2">
+          <div class="color-box">
+              <h2>Did you know?</h2>
+              <p>The report was first published in 2012 and is currently published yearly by a group of independent experts working in collaboration with United Nations.</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <!-- end pure grid group -->
+      <!-- end pure grid group -->
+
+      <!-- pure grid group -->
+      <div class="pure-g happiness-indicator-section">
+        <div class="pure-u-1-1">
+          <h1>Key Happiness Indicators</h1>
+          <h4>There are 6 major factors that are used to assess the hapiness of countries</h4>
+        </div>
+        <div class="pure-u-1-8 happiness-indicator">
+          <div class="color-circle" style="font-size: x-large;">
+              Economy
+          </div>
+          <p class="color-circle-description"> Influence of Average Earnings of a person (GDP) on overall happiness score.</p>
+        </div>
+        <div class="pure-u-1-8 happiness-indicator">
+          <div class="color-circle">
+            Family
+          </div>
+          <p class="color-circle-description"> Support from Family and living conditions to raise a family has direct influence on happiness. </p>
+        </div>
+        <div class="pure-u-1-8 happiness-indicator">
+          <div class="color-circle">
+            Health
+          </div>
+          <p class="color-circle-description">Conditions that foster a healthy lifestyle and higher life expectancy contribute to happiness.</p>
+        </div>
+        <div class="pure-u-1-8 happiness-indicator">
+          <div class="color-circle">
+            Freedom
+          </div>
+          <p class="color-circle-description">Satisfaction of one's freedom to make life choices influences overall happiness.</p>
+        </div>
+        <div class="pure-u-1-8 happiness-indicator">
+          <div class="color-circle">
+            Trust
+          </div>
+          <p class="color-circle-description">Likeliness of governments being corrupt affects the trust and overall happiness of its citizens.</p>
+        </div>
+        <div class="pure-u-1-8 happiness-indicator">
+          <div class="color-circle">
+            Generosity
+          </div>
+          <p class="color-circle-description">Likeliness of Individuals contributing to charity will elevate the overall happiness of its residents.</p>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+
+      <div class="pure-u-1-1 happiness-indicator-section">
+        <h1>Global Happiness Scores (2015 – 2019)</h1>
+        <h4>There are 6 major factors that are used to assess the hapiness of countries</h4>
+      </div>
+
+      <!-- pure grid group -->
+      <div class="pure-g map_container">
+        <div class="pure-u-1-1">
+          <div id="choropleth_map"></div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+      <br>
+      <!-- pure grid group -->
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <div class="description description-left">
+            <h2>Happiest Countries in the World</h2>
+            <p>The first column contains text and the second column contains a visualisation.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+          </div>
+        </div>
+        <div class="pure-u-1-2">
+          <div id="vis1" class="vis-container" ></div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
     <br>
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Happiest Countries in the World</h2>
-          <p>The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+      <!-- pure grid group -->
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <div id="vis2" class="vis-container" ></div>
+        </div>
+        <div class="pure-u-1-2">
+          <div class="description description-left">
+            <h2>Least Happiest Countries in the World</h2>
+            <p>The first column contains text and the second column contains a visualisation.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+          </div>
         </div>
       </div>
-      <div class="pure-u-1-2">
-        <div id="vis1" class="vis-container" ></div>
-      </div>
-    </div>
-    <!-- end pure grid group -->
-  <br>
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div id="vis2" class="vis-container" ></div>
-      </div>
-      <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Saddest Countries in the World</h2>
-          <p>The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+      <!-- end pure grid group -->
+
+      <br>
+      <!-- pure grid group -->
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <div class="description description-left">
+            <h2>Ranking over the years</h2>
+            <p>The first column contains text and the second column contains a visualisation.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+          </div>
+        </div>
+        <div class="pure-u-1-2">
+          <div id="vis3" class="vis-container" ></div>
         </div>
       </div>
-    </div>
-    <!-- end pure grid group -->
+      <!-- end pure grid group -->
 
-    <br>
-    <!-- pure grid group -->
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h2>Ranking over the years</h2>
-          <p>The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
-        </div>
-      </div>
-      <div class="pure-u-1-2">
-        <div id="vis3" class="vis-container" ></div>
-      </div>
-    </div>
-    <!-- end pure grid group -->
-
-  </div> <!-- end page -->
-
+    </div> <!-- end page content -->
+  </div> <!-- end page -->  
 
 <script type="text/javascript">
   var spec1 = "js/choropleth_map.vg.json";

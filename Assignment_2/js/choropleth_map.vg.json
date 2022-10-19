@@ -3,6 +3,7 @@
   "title": "World Happiness Report (2015 - 2019)",
   "width": 800,
   "height": 400,
+  "background": "#f7f7f7",
   "data": {
     "url": "https://raw.githubusercontent.com/melvinalex7/FIT3179/main/Assignment_2/data/Happiness_Report_Dataset_Cleaned.csv"
   },
@@ -10,7 +11,7 @@
   "params": [
     {
       "name": "year_selection",
-      "value": 2015,
+      "value": 2019,
       "bind": {
         "input": "range",
         "min": 2015,

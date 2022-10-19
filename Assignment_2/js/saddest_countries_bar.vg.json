@@ -3,10 +3,11 @@
     "title": "Least Happiest Countries in the World",
     "width": 400,
     "height": 400,
+    "background": "#f7f7f7",
     "params": [
       {
         "name": "year_selection",
-        "value": 2015,
+        "value": 2019,
         "bind": {
           "input": "range",
           "min": 2015,

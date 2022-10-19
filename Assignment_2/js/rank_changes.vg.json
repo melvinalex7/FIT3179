@@ -2,35 +2,18 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "height": 400,
     "width": 400,
+    "background": "#f7f7f7",
     "title": {
-      "text": "World Happiness Rankings (2015-2019)",
+      "text": "Global Happiness Ranking Trends (2015-2019)",
+      "subtitle": "",
       "frame": "bounds"
     },
     "params": [
         {
-        "name": "region_selection",
-        "bind": {
-          "input": "select",
-          "options": [
-            null,
-            "Americas",
-            "Europe",
-            "Africa",
-            "Asia",
-            "Oceania"
-          ],
-          "labels": [
-            "Show All",
-            "Americas",
-            "Europe",
-            "Africa",
-            "Asia",
-            "Oceania"
-          ],
-          "name": "Region Selection: "
+          "name": "country_selection",
+          "select": {"type": "point", "fields": ["Country"]},
+          "bind": "legend"
         }
-      }
-    
       ],
     "data": {
       "name": "report_source",
@@ -48,9 +31,6 @@
         }
       },
       {
-        "filter": "region_selection == null || datum.region == region_selection"
-      },
-      {
         "window": [{
             "op": "average",
             "field": "Happiness_Rank",
@@ -60,19 +40,31 @@
           "sort": [{ "field": "Happiness_Rank", "order": "ascending" }]
       },
       { "filter": "datum.happiness_rank <= 10" }],
-    "mark": {"type": "line", "orient": "vertical"},
-    "encoding": {
-      "x": {"field": "Year", "type": "ordinal"},
-      "y": {
-        "field": "Happiness_Rank", 
-        "type": "ordinal",
-        "sort": {"field": "happiness_rank", "order":"ascending"}
-      },
-      "tooltip": [
-        {"field": "Country", "type": "nominal", "title": "Country"},
-        {"field": "Happiness_Rank", "type": "quantitative", "title": "Happiness Rank", "format": ".4"}],
-      "color": {
-        "field": "Country", "type": "nominal"
-      }
-    }
+        "mark": {"type": "line", "orient": "vertical", "point": true, "size": 3},
+        "encoding": {
+          "x": {"field": "Year", "type": "ordinal"},
+          "y": {
+            "field": "Happiness_Rank", 
+            "type": "ordinal",
+            "sort": {"field": "happiness_rank", "order":"ascending"},
+            "title": "Happiness Rank"
+          },
+          "tooltip": [
+            {"field": "Country", "type": "nominal", "title": "Country"},
+            {"field": "Happiness_Rank", "type": "quantitative", "title": "Happiness Rank", "format": ".4"}],
+          "color": {
+            "field": "Country", 
+            "type": "nominal",
+            "scale": {
+              "scheme": ["#a6cee3", "#1f78b4", "#b2df8a", "#33a02c" ,"#fb9a99", "#e31a1c", "#fdbf6f", "#ff7f00", "#cab2d6", "#6a3d9a"]
+            }
+
+          },
+          "opacity": {
+            "condition": {"param": "country_selection", "value": 0.6},
+            "value": 0.2
+          }
+        }
+
+    
   }
