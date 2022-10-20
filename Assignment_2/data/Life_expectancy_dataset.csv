@@ -1,4 +1,4 @@
-Rank,Country,Overall Life,Male Life,Female Life,Continent
+Rank,Country,Life_Expectancy,Male Life,Female Life,Continent
 1,Monaco,89.5,85.6,93.5,Europe
 2,Japan,85,81.7,88.5,Asia
 3,Singapore,85,82.3,87.8,Asia
