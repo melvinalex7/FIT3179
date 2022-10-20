@@ -1,13 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "World Happiness Report (2015 - 2019)",
-  "width": 800,
+  "width": 1000,
   "height": 400,
   "background": "#f7f7f7",
   "data": {
     "url": "https://raw.githubusercontent.com/melvinalex7/FIT3179/main/Assignment_2/data/Happiness_Report_Dataset_Cleaned.csv"
   },
-  "projection": {"type": "equalEarth"},
   "params": [
     {
       "name": "year_selection",
@@ -19,9 +18,38 @@
         "step": 1,
         "name": "Report Year: "
       }
+    },
+    {
+      "name": "map_zoom_selection",
+      "value": 150,
+      "bind": {
+        "input": "range",
+        "min": 150,
+        "max": 800,
+        "step": 50,
+        "name": "Zoom: "
+      }
+    },
+    {
+      "name": "map_center_selection",
+      "value": [0,0],
+      "bind": {
+        "input": "select",
+        "options": [
+          [0,0],
+          [28,0],
+          [80,20],
+          [135,-25],
+          [35,45],
+          [-95,35],
+          [-60,-20]
+        ],
+        "labels": ["World","Africa", "Asia", "Australia", "Europe", "North America", "South America"],
+        "name": "Map Center (Region): "
+      }
     }
 ],  
-
+  "projection": {"type": "equalEarth", "scale": {"expr": "map_zoom_selection"}, "center": {"expr": "map_center_selection"}},
   "layer": [
     {
       "data": {
@@ -77,12 +105,13 @@
         "color": {
           "field": "Happiness_Score",
           "type": "quantitative",
-          "scale": {"type": "linear", "scheme": "redpurple"},
+          "scale": {"type": "threshold", "domain": [1,2,3,4,5], "scheme": "redpurple"},
           "legend": {"format": ".2s", "title": "Happiness Score"}
         },
         "tooltip": [
           {"field": "Country", "type": "nominal", "title": "Country"},
-          {"field": "Happiness_Score", "type": "quantitative", "title": "Happiness Score"}
+          {"field": "Happiness_Score", "type": "quantitative", "title": "Happiness Score"},
+          {"field": "Happiness_Rank", "type": "quantitative", "title": "Happiness Rank"}
         ]
       }
     }

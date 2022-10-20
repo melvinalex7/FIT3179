@@ -99,13 +99,13 @@
   },
   "layer":[
     {
-      "mark": {"type": "bar", "height": 5, "clip": true}
+      "mark": {"type": "bar", "height": 5, "clip": false}
     },
     {
-      "mark": {"type": "circle", "size": 1400, "opacity": 1, "clip": true}
+      "mark": {"type": "circle", "size": 1400, "opacity": 1, "clip": false}
     },
     {
-      "mark": {"type": "image", "width": 35, "height": 35, "clip": true},
+      "mark": {"type": "image", "width": 35, "height": 35, "clip": false},
       "encoding": {
         "url": {"field": "ImageURL", "type": "nominal"}
       }

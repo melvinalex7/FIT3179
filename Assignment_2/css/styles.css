@@ -60,7 +60,7 @@ body *{
 
   .color-circle{
     border-radius: 50%;
-    background-image: linear-gradient( #e05d4c,#2d204b);
+    background-image: linear-gradient( #e05d4c,#652374);
     width: 110px; 
     height: 110px; 
     padding: 25px;
@@ -109,5 +109,5 @@ body *{
   .map_container {
     display: block;
     margin: auto;
-    width: 80%;
+    width: 100%;
   }
