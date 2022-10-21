@@ -57,7 +57,7 @@
         "color": {"field": "Factor", "type": "nominal", "legend": null},
         "tooltip": [
           {"field": "Factor"},
-          {"field": "Factor Score", "format":".4s"},
+          {"field": "Factor Score", "format":".4f"},
           {"field": "Contribution", "format":".0%", "title": "Contribution"}
         ]
       }
@@ -70,7 +70,7 @@
         "color": {"field": "Factor", "type": "nominal"},
         "tooltip": [
           {"field": "Factor"},
-          {"field": "Factor Score", "format":".4s"},
+          {"field": "Factor Score", "format":".4f"},
           {"field": "Contribution", "format":".0%", "title": "Contribution"}
         ]
       }
