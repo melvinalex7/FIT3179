@@ -113,16 +113,3 @@ body *{
     margin: auto;
     width: 100%;
   }
-
-  .finland-flag {
-    background-image: url("https://hatscripts.github.io/circle-flags/flags/fi.svg");
-    background-size: auto;
-    border-radius: 50%;
-    width: 110px; 
-    height: 110px; 
-    padding: 25px;
-    text-align: center;
-    line-height: 110px;
-    vertical-align: middle;
-
-  }

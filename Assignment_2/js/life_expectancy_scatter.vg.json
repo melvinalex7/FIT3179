@@ -42,7 +42,8 @@
     "x": {
       "field": "Life_Expectancy",
       "type": "quantitative",
-      "title": "Life Expectancy (Age)"
+      "title": "Life Expectancy (Age)",
+      "axis": {"grid": true}
     },
     "y": {
       "field": "Average_Rank",
@@ -102,8 +103,14 @@
       "encoding": {
         "size": {"value": "3"},
         "y": {"aggregate": "mean", "field": "Average_Rank"},
-        "x": {"field": "Life_Expectancy","bin": {"step": 5}} 
+        "x": {
+          "field": "Life_Expectancy",
+          "bin": {"step": 5},
+          "scale": {"domain": [0, 90]},
+          "axis": null
+        } 
       }
     }
-  ]
+  ],
+  "resolve": {"scale": {"x": "independent"}}
 }

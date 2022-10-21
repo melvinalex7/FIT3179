@@ -81,7 +81,8 @@
         "field": "country_wrap",
         "type": "nominal",
         "title": "Country",
-        "sort": {"field": "selected_category", "order":"ascending"}
+        "sort": {"field": "selected_category", "order":"ascending"},
+        "axis": {"labelPadding": 20}
     },
     "x": {
         "field": "selected_category",

@@ -79,7 +79,8 @@
   "y": {
       "field": "Country",
       "type": "nominal",
-      "sort": {"field": "selected_category", "order":"descending"}
+      "sort": {"field": "selected_category", "order":"descending"},
+      "axis": {"labelPadding": 20}
   },
   "x": {
       "field": "selected_category",
