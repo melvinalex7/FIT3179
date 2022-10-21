@@ -1,0 +1,37 @@
+﻿Continent,Factor,Score
+Europe,Economy,1.204009114
+Europe,Family,1.233306695
+Europe,Health,0.807361575
+Europe,Freedom,0.415017523
+Europe,Trust,0.13729975
+Europe,Generosity,0.202717767
+North America,Economy,0.98040511
+North America,Family,1.173701686
+North America,Health,0.686667638
+North America,Freedom,0.481285876
+North America,Trust,0.111615017
+North America,Generosity,0.230037973
+Oceania,Economy,1.356197099
+Oceania,Family,1.424367708
+Oceania,Health,0.90307365
+Oceania,Freedom,0.611412951
+Oceania,Trust,0.357294043
+Oceania,Generosity,0.424441438
+Asia,Economy,1.011773683
+Asia,Family,1.073013815
+Asia,Health,0.667078149
+Asia,Freedom,0.432868417
+Asia,Trust,0.140523674
+Asia,Generosity,0.263540949
+South America,Economy,1.029967709
+South America,Family,1.216598297
+South America,Health,0.681405031
+South America,Freedom,0.47206494
+South America,Trust,0.087967491
+South America,Generosity,0.167605801
+Africa,Economy,0.490018606
+Africa,Family,0.851020502
+Africa,Health,0.320558509
+Africa,Freedom,0.34913132
+Africa,Trust,0.11886419
+Africa,Generosity,0.203714494
