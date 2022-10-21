@@ -29,7 +29,7 @@
       <!-- pure grid group -->
       <div class="pure-g" style="padding-bottom: 20px;">
         <div class="pure-u-1-2">
-          <p>The World Happiness Report is a landmark survey of the state of global happiness. 
+          <p style="padding-right: 10px">The World Happiness Report is a landmark survey of the state of global happiness. 
               Several Hapiness Indicators are used to assess the overall hapiness of countries. 
               The report is now gaining popularity more than ever as countries around the world now use happiness indicators to reform government services and guide policy decisions. 
               Several leading experts from a variety of disciplines, including economics, psychology, survey analysis, national statistics, health, and public policy, analyse how different indicators contribute to a country's development.
@@ -88,7 +88,7 @@
         </div>
         <div class="pure-u-1-1">
           <hr>
-          <p> Note: The Happiness Report also uses the "Dystopial Residual Factor" to calculate Ranks. However, it will not considered in this visualisation.</p>
+          <p> <b>Note: </b>The Happiness Report also uses the "Dystopial Residual Factor" to calculate Ranks. However, it will not be considered in this visualisation.</p>
           <hr>
         </div>
       </div>
@@ -106,59 +106,113 @@
         </div>
       </div>
       <!-- end pure grid group -->
-      <br>
+      <div class="pure-u-1-1 happiness-indicator-section">
+        <hr>
+        <p> <b>Note: </b>Hover over countries to view more details.</p>
+        <hr>
+      </div>
+
+      <div class="pure-u-1-1 happiness-indicator-section" >
+        <h1>Best and Worst Performing Countries</h1>
+        <h4>The Top 10 and Bottom 10 Ranked Countries</h4>
+      </div>
       <!-- pure grid group -->
       <div class="pure-g">
         <div class="pure-u-1-2">
           <div class="description description-left">
             <h2>Happiest Countries in the World</h2>
-            <p>The first column contains text and the second column contains a visualisation.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+            <p style="text-justify: center; padding-right: 10px;">The visualisation depicts the closeness of happiness scores of the highly ranked countries.
+               A major concentration of the happiest countries is in the European Continent suggesting higher quality of living in the region. </p>
           </div>
-        </div>
-        <div class="pure-u-1-2">
           <div id="vis1" class="vis-container" ></div>
-        </div>
-      </div>
-      <!-- end pure grid group -->
-    <br>
-      <!-- pure grid group -->
-      <div class="pure-g">
-        <div class="pure-u-1-2">
-          <div id="vis2" class="vis-container" ></div>
         </div>
         <div class="pure-u-1-2">
           <div class="description description-left">
             <h2>Least Happiest Countries in the World</h2>
-            <p>The first column contains text and the second column contains a visualisation.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+            <p>The chart visualises the differences in the happiness scores of the low ranked countries.
+              A major concentration of the least happiest countries is in the African Continent suggesting lower quality of living in the region.  </p>
           </div>
+          <div id="vis2" class="vis-container" ></div>
         </div>
       </div>
       <!-- end pure grid group -->
-
+    <br>
+      <hr>
       <br>
+      <div class="pure-u-1-1 happiness-indicator-section" >
+        <h1>Race to become the World's Happiest Country</h1>
+        <h4>Evaluating Trends in the Top 10 Happiest Countries in the World</h4>
+      </div>
       <!-- pure grid group -->
       <div class="pure-g">
-        <div class="pure-u-1-2">
+        <div class="pure-u-1-3">
           <div class="description description-left">
-            <h2>Ranking over the years</h2>
-            <p>The first column contains text and the second column contains a visualisation.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+            <p>
+            A number of countries have been vying for the title of the world's happiest country, and it is evident that there are a numerous approaches that can lead to happiness. Some countries, like Denmark, focus on creating a high level of social support, while others, like Costa Rica, focus on environmental protection.
+              Countries in the world are making massive strides to improve in key areas to boost their happiness scores. Countries in Northern Europe have maintained competive rankings and are competing to claim the title of the "World's Happiest Country".
+            The visualisation depicts the trends in ranks of the Happiest Countries in the world.  </p>
           </div>
         </div>
-        <div class="pure-u-1-2">
+        <div class="pure-u-2-3">
           <div id="vis3" class="vis-container" ></div>
         </div>
       </div>
       <!-- end pure grid group -->
 
+      <hr>
+      <br>
+      <div class="pure-u-1-1 happiness-indicator-section" >
+        <h1>Do Happier Countries Live Longer?</h1>
+        <h4>Evaluating the co-relation between the Happiness Score and Life Expectancy of a country</h4>
+      </div>
+
+      <!-- pure grid group -->
+      <div class="pure-g">
+        <div class="pure-u-2-3">
+          <div id="vis4" class="vis-container"></div>
+        </div>
+        <div class="pure-u-1-3">
+          <div class="description description-left">
+            <p>
+              According to scientific studies, happier nations have longer life expectancy rates. 
+              This could be because to various factors, such as the fact that happier nations typically have higher levels of social cohesiveness and trust, which can result in better health outcomes. 
+              Aside from that, happy nations typically have greater economic development, which can increase access to better healthcare and other amenities that promote health and longevity.  
+              Also, happier nations tend to have more effective public health institutions and policies, which can also lead to improved health outcomes.</p>
+              
+              It is important to mention that happiness is only one of several elements that can influence life expectancy. In addition, factors like access to healthcare, education, and income are crucial.
+              <p>A positive co-relation is of happiness scores and life expectancy is evident from the visualisation's trend line.</p>
+           </div>
+        </div>
+        
+      </div>
+      <!-- end pure grid group -->
+      <hr>
+      <br>
+      <div class="pure-u-1-1 happiness-indicator-section" >
+        <h1>Effect of Happiness Indicators on Overall Happiness Score</h1>
+        
+      </div>
+      
+      <!-- pure grid group -->
+      <div class="pure-g">
+        <div class="pure-u-2-5">
+          <div class="description description-left">
+            <p>
+              The Overall Happiness Score of a country is determined by a variety of factors, including the Happiness Indicators. The Happiness Indicators are a set of metrics that measure the level of happiness in a country.
+              <p> As per the visualisation the Family, Health and Economy Happiness Indicators have the significant influence on the overall happiness of a country's residents, complemented by other less significant factors like Trust. </p>
+            </p>
+           </div>
+        </div>
+        <div class="pure-u-3-5">
+          <div id="vis5" class="vis-container"></div>
+        </div>
+      </div>
+      <!-- end pure grid group -->
+      <div class="pure-u-1-1 happiness-indicator-section">
+        <hr>
+        <p style="margin-right: 0;"> <b>Done and Developed by Melvin Alex.</b></p>
+        <p style="margin-left: 0;"> <b>October 2022</b></p>
+    </div>
     </div> <!-- end page content -->
   </div> <!-- end page -->  
 
@@ -180,6 +234,16 @@
 
   var spec4 = "js/rank_changes.vg.json";
   vegaEmbed('#vis3', spec4).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec5 = "js/life_expectancy_scatter.vg.json";
+  vegaEmbed('#vis4', spec5).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var spec6 = "js/regional_factor_contribution.vg.json";
+  vegaEmbed('#vis5', spec6).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>

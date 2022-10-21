@@ -1,0 +1,86 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple donut chart with embedded data.",
+  "width": 650,
+  "height": 300,
+  "background": "#f7f7f7",
+  "title": "Regional Contribution of Happiness Factors to Overall Happiness Scores",
+
+  "data": {
+    "url": "https://raw.githubusercontent.com/melvinalex7/FIT3179/main/Assignment_2/data/continental_average_scores.csv"
+  },
+  "params": [
+    {
+      "name": "continent_selection",
+      "value": "North America",
+      "bind": {
+        "input": "select",
+        "options": [
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "labels": [
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "continent_selection == null || datum.Continent == continent_selection"
+    },
+    {
+      "window": [{
+            "op": "average",
+            "field": "Score",
+            "as": "Factor Score"
+          }],
+          "groupby": ["Factor"]
+    }
+  ],
+  
+  "layer": [
+    {
+      "mark": {"type": "arc", "innerRadius": 80, "tooltip": true},
+       "encoding": {
+        "theta": {"field": "Factor Score", "type": "quantitative",  "stack": "normalize"},
+        "color": {"field": "Factor", "type": "nominal", "legend": null},
+        "tooltip": [
+          {"field": "Factor"},
+          {"field": "Factor Score", "format":".4s"},
+          {"field": "Contribution", "format":".0%", "title": "Contribution"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "text", "radius": 190, "fontSize": 16},
+      "encoding": {
+        "text": {"field": "Factor", "type": "nominal"},
+        "theta": {"field": "Factor Score", "type": "quantitative",  "stack": "normalize"},
+        "color": {"field": "Factor", "type": "nominal"},
+        "tooltip": [
+          {"field": "Factor"},
+          {"field": "Factor Score", "format":".4s"},
+          {"field": "Contribution", "format":".0%", "title": "Contribution"}
+        ]
+      }
+    }
+    
+  ],
+  "config": {
+    "view": {
+       "stroke": "transparent"
+    }
+  }
+  
+}

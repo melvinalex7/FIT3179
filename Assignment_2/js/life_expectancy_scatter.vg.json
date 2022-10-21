@@ -1,0 +1,109 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 550,
+  "height": 400,
+  "background": "#f7f7f7",
+  "title": "Co-Relation between Happiness Rank and Life Expectancy",
+  "data": {
+    "url": "https://raw.githubusercontent.com/melvinalex7/FIT3179/main/Assignment_2/data/Average_Country_Rank_Happiness_Report.csv"
+  },
+  "transform": [
+    {
+      "lookup": "Country",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/melvinalex7/FIT3179/main/Assignment_2/data/Life_expectancy_dataset.csv"
+        },
+        "key": "Country",
+        "fields": [ "Life_Expectancy"]
+      }
+    },
+    {
+      "lookup": "Country",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/melvinalex7/FIT3179/main/Assignment_2/data/continents.csv"
+        },
+        "key": "Country",
+        "fields": ["Continent"]
+      }
+    },
+    {
+      "window": [
+        {
+          "field": "Life_Expectancy",
+          "op": "mean",
+          "as": "average_life_expectancy"
+        }
+      ]
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Life_Expectancy",
+      "type": "quantitative",
+      "title": "Life Expectancy (Age)"
+    },
+    "y": {
+      "field": "Average_Rank",
+      "type": "quantitative",
+      "title": "Average Happiness Rank",
+      "scale":{"domain": [160, 0]}
+    }
+  },
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "continent_selection",
+          "select": {"type": "point", "fields": ["Continent"]},
+          "bind": "legend"
+        }
+      ],
+      "mark": "circle",
+      "encoding": {
+        "size": {"value": "200"},
+        "color": {
+          "field": "Continent",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "North America",
+              "South America",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Oceania"
+            ],
+            "range": [
+              "#e41a1c",
+              "#984ea3",
+              "#ff7f00",
+              "#a6cee3",
+              "#377eb8",
+              "#a65628"
+            ]
+          },
+          "legend": {"title": "Select Continent:"}
+        },
+        "opacity": {
+            "condition": {"param": "continent_selection", "value": 0.6},
+            "value": 0.2
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "Life_Expectancy", "type": "quantitative", "title": "Average Life Expectancy"},
+          { "field": "Average_Rank", "type": "ordinal", "title": "Average Happiness Rank"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "line", "color":"midnightblue"},
+      "encoding": {
+        "size": {"value": "3"},
+        "y": {"aggregate": "mean", "field": "Average_Rank"},
+        "x": {"field": "Life_Expectancy","bin": {"step": 5}} 
+      }
+    }
+  ]
+}

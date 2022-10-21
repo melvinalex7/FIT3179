@@ -26,6 +26,8 @@ body *{
   border-style: solid;
   border-color:#2d204b;
   border-radius: 25px;
+  text-align: justify;
+  text-justify: inter-word;
   }
   
   .page-content {
@@ -55,7 +57,7 @@ body *{
       text-align:center; 
       padding-top: 20px;
       display: block;
-      padding-bottom: 20px;
+      padding-bottom: 10px;
   }
 
   .color-circle{
